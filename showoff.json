@@ -2,6 +2,7 @@
 	"name": "An Introduction to Web Operations",
 	"description": "lksjdflkjsdf",
 	"sections": [
-		{"section":"01-intro"}
+		{"section": "01-intro"},
+		{"section": "02-definitions"}
 	]
 }
