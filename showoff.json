@@ -4,6 +4,7 @@
 	"sections": [
 		{"section": "01-intro"},
 		{"section": "02-definitions"},
-		{"section": "03-general-web-architecture"}
+		{"section": "03-general-web-architecture"},
+		{"section": "04-reproducible-servers"}
 	]
 }
