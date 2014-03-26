@@ -3,6 +3,7 @@
 	"description": "lksjdflkjsdf",
 	"sections": [
 		{"section": "01-intro"},
-		{"section": "02-definitions"}
+		{"section": "02-definitions"},
+		{"section": "03-general-web-architecture"}
 	]
 }
