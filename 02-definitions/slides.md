@@ -25,10 +25,10 @@
 * Ruby
 
 !SLIDE bullets incremental
+* SQL
 * Javascript
 * VCL
 * C
-* C++
 * Java
 * Perl
 * etc.
