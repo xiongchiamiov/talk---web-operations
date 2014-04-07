@@ -14,6 +14,14 @@
 * ![iFixit](ifixit.png)
 * ![Dozuki](dozuki.png)
 
+!SLIDE incremental bullets
+## http://www.ifixit.com/Info/Jobs
+
+* Gain cash and experience during the school year
+* Flexible hours
+* Grow as an individual
+* High-scale, high-impact real-world experience
+
 !SLIDE
 # Table of Contents #
 ## What *is* Web Operations?
