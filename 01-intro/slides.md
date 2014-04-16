@@ -23,6 +23,9 @@
 * High-scale, high-impact real-world experience
 
 !SLIDE
+## reddit.com/r/CsCareerQuestions
+
+!SLIDE
 # Table of Contents #
 ## What *is* Web Operations?
 ## General Web Architecture
