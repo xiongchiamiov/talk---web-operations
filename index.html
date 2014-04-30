@@ -37,6 +37,8 @@
     
       <script type="text/javascript" src=".//js/sh_lang/sh_sh.min.js"></script>
     
+      <script type="text/javascript" src=".//js/sh_lang/sh_php.min.js"></script>
+    
   
 
   
@@ -242,18 +244,18 @@ except by taking out laptops and trying to go on it."</p>
 </blockquote></div>
 </div><div id="05-monitoring-and-alerting/slides" class="slide " data-transition="none"><div class="content " ref="05-monitoring-and-alerting/slides/6">
 <h1>What do we measure?</h1></div>
-</div><div id="05-monitoring-and-alerting/slides" class="slide " data-transition="none"><div class="content " ref="05-monitoring-and-alerting/slides/7">
+</div><div id="05-monitoring-and-alerting/slides" class="slide center" data-transition="none"><div class="content center" ref="05-monitoring-and-alerting/slides/7">
 <h2>Business metrics</h2>
 
-<p><image/></p></div>
-</div><div id="05-monitoring-and-alerting/slides" class="slide " data-transition="none"><div class="content " ref="05-monitoring-and-alerting/slides/8">
+<p><img src="./file/05-monitoring-and-alerting/business-metrics.png" alt="guide views and completions"/></p></div>
+</div><div id="05-monitoring-and-alerting/slides" class="slide center" data-transition="none"><div class="content center" ref="05-monitoring-and-alerting/slides/8">
 <h2>Application metrics</h2>
 
-<p><image/></p></div>
-</div><div id="05-monitoring-and-alerting/slides" class="slide " data-transition="none"><div class="content " ref="05-monitoring-and-alerting/slides/9">
+<p><img src="./file/05-monitoring-and-alerting/application-metrics.png" alt="password changes"/></p></div>
+</div><div id="05-monitoring-and-alerting/slides" class="slide center" data-transition="none"><div class="content center" ref="05-monitoring-and-alerting/slides/9">
 <h2>System metrics</h2>
 
-<p><image/></p></div>
+<p><img src="./file/05-monitoring-and-alerting/system-metrics.png" alt="db master load"/></p></div>
 </div><div id="05-monitoring-and-alerting/slides" class="slide " data-transition="none"><div class="content " ref="05-monitoring-and-alerting/slides/10">
 <h1>What do we use to measure?</h1></div>
 </div><div id="05-monitoring-and-alerting/slides" class="slide " data-transition="none"><div class="content " ref="05-monitoring-and-alerting/slides/11">
@@ -265,12 +267,25 @@ except by taking out laptops and trying to go on it."</p>
 <h2>Graphite</h2>
 
 <p>https://graphite.readthedocs.org/</p></div>
-</div><div id="05-monitoring-and-alerting/slides" class="slide bullets incremental" data-transition="none"><div class="content bullets incremental" ref="05-monitoring-and-alerting/slides/13">
-<ul>
-<li>StatsD - <code>Stats::recordEvent('talk.web-ops');</code>
-</li>
-<li>pipe-to-graphite</li>
-</ul></div>
+</div><div id="05-monitoring-and-alerting/slides" class="slide " data-transition="none"><div class="content " ref="05-monitoring-and-alerting/slides/13">
+<h2>StatsD</h2>
+
+<pre class="sh_php"><code>Stats::recordEvent('talk.web-ops');</code></pre></div>
+</div><div id="05-monitoring-and-alerting/slides" class="slide " data-transition="none"><div class="content " ref="05-monitoring-and-alerting/slides/14">
+<h2>pipe-to-graphite</h2>
+
+<pre class="sh_sh"><code># Produce a huge number of stats about mysql
+mysql -u root -e "show global status" |
+# Skip the first line (column headers "Variable_name Value")
+tail -n +2 |
+# lower-case everything because Capitals_with_underscores_are_annoying
+tr '[A-Z]' '[a-z]' |
+# Prepend 'mysql.' and turn a few instances of 'name_' into 'name.' mainly
+# so they are grouped in the Graphite UI
+sed -re "s/^(com|handler|innodb|key|qcache|select|sort|threads)_/./" \
+     -e "s/^/mysql./" -e "/\S+\s+[0-9.-]+/!d"</code></pre></div>
+</div><div id="05-monitoring-and-alerting/slides" class="slide center" data-transition="none"><div class="content center" ref="05-monitoring-and-alerting/slides/15">
+<p><img src="./file/05-monitoring-and-alerting/dashboard.png" alt="graphite dashboard"/></p></div>
 </div></div>
 <div id="pauseScreen">
   PAUSED
