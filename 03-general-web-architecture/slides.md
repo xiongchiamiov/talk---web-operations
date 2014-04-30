@@ -1,9 +1,10 @@
 !SLIDE
 # General Web Architecture
 
-!SLIDE bullets incremental center
+!SLIDE center
 ## HTTP is Stateless
-* ![xkcd 869](xkcd.png)
+![xkcd 869](xkcd.png)
+### xkcd.com/869
 
 !SLIDE center
 ![iFixit server architecture](architecture.png)
