@@ -138,7 +138,9 @@
 
 <h2>Monitoring and Alerting</h2>
 
-<h2>Web Security</h2></div>
+<h2>Web Security</h2>
+
+<h2>Performance</h2></div>
 </div><div id="02-definitions/slides" class="slide " data-transition="none"><div class="content " ref="02-definitions/slides/1">
 <h1>What <em>is</em> Web Operations?</h1></div>
 </div><div id="02-definitions/slides" class="slide " data-transition="none"><div class="content " ref="02-definitions/slides/2">
@@ -174,12 +176,12 @@
 </ul></div>
 </div><div id="03-general-web-architecture/slides" class="slide " data-transition="none"><div class="content " ref="03-general-web-architecture/slides/1">
 <h1>General Web Architecture</h1></div>
-</div><div id="03-general-web-architecture/slides" class="slide bullets incremental center" data-transition="none"><div class="content bullets incremental center" ref="03-general-web-architecture/slides/2">
+</div><div id="03-general-web-architecture/slides" class="slide center" data-transition="none"><div class="content center" ref="03-general-web-architecture/slides/2">
 <h2>HTTP is Stateless</h2>
 
-<ul>
-<li><img src="./file/03-general-web-architecture/xkcd.png" alt="xkcd 869"/></li>
-</ul></div>
+<p><img src="./file/03-general-web-architecture/xkcd.png" alt="xkcd 869"/></p>
+
+<h3>xkcd.com/869</h3></div>
 </div><div id="03-general-web-architecture/slides" class="slide center" data-transition="none"><div class="content center" ref="03-general-web-architecture/slides/3">
 <p><img src="./file/03-general-web-architecture/architecture.png" alt="iFixit server architecture"/></p></div>
 </div><div id="03-general-web-architecture/slides" class="slide center" data-transition="none"><div class="content center" ref="03-general-web-architecture/slides/4">
@@ -225,7 +227,7 @@ cd httpd-$VERSION
 </div><div id="05-monitoring-and-alerting/slides" class="slide " data-transition="none"><div class="content " ref="05-monitoring-and-alerting/slides/2">
 <h2>Healthcare.gov</h2>
 
-<h3>http://dpaste.com/1756566/plain/</h3></div>
+<h3>http://dpaste.com/1756566/#wrap</h3></div>
 </div><div id="05-monitoring-and-alerting/slides" class="slide " data-transition="none"><div class="content " ref="05-monitoring-and-alerting/slides/3">
 <blockquote>
 <p>"Nobody could even tell us if the system was up as we were sitting there,
@@ -286,6 +288,46 @@ sed -re "s/^(com|handler|innodb|key|qcache|select|sort|threads)_/./" \
      -e "s/^/mysql./" -e "/\S+\s+[0-9.-]+/!d"</code></pre></div>
 </div><div id="05-monitoring-and-alerting/slides" class="slide center" data-transition="none"><div class="content center" ref="05-monitoring-and-alerting/slides/15">
 <p><img src="./file/05-monitoring-and-alerting/dashboard.png" alt="graphite dashboard"/></p></div>
+</div><div id="06-web-security/slides" class="slide " data-transition="none"><div class="content " ref="06-web-security/slides/1">
+<h1>Web Security</h1></div>
+</div><div id="06-web-security/slides" class="slide bullets incremental" data-transition="none"><div class="content bullets incremental" ref="06-web-security/slides/2">
+<ul>
+<li><strike>Cryptography</strike></li>
+<li>Applied security (cybersecurity)</li>
+</ul></div>
+</div><div id="06-web-security/slides" class="slide " data-transition="none"><div class="content " ref="06-web-security/slides/3">
+<h1>Security Categorizations</h1></div>
+</div><div id="06-web-security/slides" class="slide " data-transition="none"><div class="content " ref="06-web-security/slides/4">
+<h2>Confidentiality</h2>
+
+<p>What most people think of - preventing people from seeing things they
+shouldn't.</p></div>
+</div><div id="06-web-security/slides" class="slide " data-transition="none"><div class="content " ref="06-web-security/slides/5">
+<h2>Data Integrity</h2>
+
+<p>Not only should people not be able to see things they shouldn't, but they
+shouldn't be able to modify them either.</p></div>
+</div><div id="06-web-security/slides" class="slide " data-transition="none"><div class="content " ref="06-web-security/slides/6">
+<h2>Availability</h2>
+
+<p>Users being able to do what they want to.</p></div>
+</div><div id="06-web-security/slides" class="slide " data-transition="none"><div class="content " ref="06-web-security/slides/7">
+<h2>Consistency</h2>
+
+<h2>Auditability</h2></div>
+</div><div id="06-web-security/slides" class="slide " data-transition="none"><div class="content " ref="06-web-security/slides/8">
+<h1>Common Vulnerabilities</h1></div>
+</div><div id="06-web-security/slides" class="slide center" data-transition="none"><div class="content center" ref="06-web-security/slides/9">
+<h2>SQL Injection</h2>
+
+<p><img src="./file/06-web-security/xkcd.png" alt="Bobby Tables"/>
+http://bobby-tables.com/</p></div>
+</div><div id="06-web-security/slides" class="slide " data-transition="none"><div class="content " ref="06-web-security/slides/10">
+<h2>Cross-Site Scripting (XSS)</h2></div>
+</div><div id="06-web-security/slides" class="slide " data-transition="none"><div class="content " ref="06-web-security/slides/11">
+<h2>Cross-Site Request Forgery (CSRF)</h2>
+
+<h3>http://itbrokeand.ifixit.com/2013/07/21/csrf-how-we-do-it.html</h3></div>
 </div></div>
 <div id="pauseScreen">
   PAUSED
