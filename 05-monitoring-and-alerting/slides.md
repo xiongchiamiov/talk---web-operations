@@ -3,7 +3,7 @@
 
 !SLIDE
 ## Healthcare.gov
-### http://dpaste.com/1756566/plain/
+### http://dpaste.com/1756566/#wrap
 
 !SLIDE
 > "Nobody could even tell us if the system was up as we were sitting there,
