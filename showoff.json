@@ -5,6 +5,7 @@
 		{"section": "01-intro"},
 		{"section": "02-definitions"},
 		{"section": "03-general-web-architecture"},
-		{"section": "04-reproducible-servers"}
+		{"section": "04-reproducible-servers"},
+		{"section": "05-monitoring-and-alerting"}
 	]
 }
