@@ -7,6 +7,7 @@
 		{"section": "03-general-web-architecture"},
 		{"section": "04-reproducible-servers"},
 		{"section": "05-monitoring-and-alerting"},
-		{"section": "06-web-security"}
+		{"section": "06-web-security"},
+		{"section": "07-performance"}
 	]
 }
